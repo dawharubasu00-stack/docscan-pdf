@@ -1,0 +1,24 @@
+{
+  "overview": "A document scanner and PDF maker web app that captures documents via camera or image upload, applies perspective correction, and generates downloadable PDFs — all processed locally in the browser for privacy.",
+  "features": [
+    "Camera capture with live preview and edge detection",
+    "Upload images (JPG, PNG) as document pages",
+    "Perspective correction for scanned documents",
+    "Page management: add, remove, reorder pages",
+    "Configurable PDF output (A4, Letter, portrait/landscape)",
+    "Image quality and compression controls",
+    "Auto page numbering",
+    "Instant PDF download with timestamp filename",
+    "Fully client-side processing — no files uploaded to server",
+    "Responsive layout for mobile and desktop"
+  ],
+  "category": "productivity",
+  "tags": [
+    "document-scanner",
+    "pdf-maker",
+    "camera",
+    "productivity",
+    "file-conversion"
+  ],
+  "last_updated": "2026-04-24T07:40:43.252Z"
+}

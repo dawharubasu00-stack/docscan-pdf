@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "General Sans", sans-serif;
+    --font-body: "General Sans", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 0.5rem;
+
+    --background: 0.97 0 0;
+    --foreground: 0.18 0 0;
+    --card: 1.0 0 0;
+    --card-foreground: 0.18 0 0;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.18 0 0;
+
+    --primary: 0.55 0.16 213;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.92 0 0;
+    --secondary-foreground: 0.25 0 0;
+    --muted: 0.92 0 0;
+    --muted-foreground: 0.45 0 0;
+
+    --accent: 0.62 0.18 185;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.88 0 0;
+    --input: 0.88 0 0;
+    --ring: 0.55 0.16 213;
+
+    --chart-1: 0.55 0.16 213;
+    --chart-2: 0.62 0.18 185;
+    --chart-3: 0.65 0.2 150;
+    --chart-4: 0.75 0.15 120;
+    --chart-5: 0.68 0.12 95;
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.18 0 0;
+    --sidebar-primary: 0.55 0.16 213;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.92 0 0;
+    --sidebar-accent-foreground: 0.25 0 0;
+    --sidebar-border: 0.88 0 0;
+    --sidebar-ring: 0.55 0.16 213;
+  }
+
+  .dark {
+    --background: 0.12 0 0;
+    --foreground: 0.94 0 0;
+    --card: 0.16 0 0;
+    --card-foreground: 0.94 0 0;
+    --popover: 0.2 0 0;
+    --popover-foreground: 0.94 0 0;
+
+    --primary: 0.65 0.2 213;
+    --primary-foreground: 0.12 0 0;
+
+    --secondary: 0.2 0 0;
+    --secondary-foreground: 0.88 0 0;
+    --muted: 0.2 0 0;
+    --muted-foreground: 0.52 0 0;
+
+    --accent: 0.72 0.22 185;
+    --accent-foreground: 0.12 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.12 0 0;
+
+    --border: 0.24 0 0;
+    --input: 0.24 0 0;
+    --ring: 0.65 0.2 213;
+
+    --chart-1: 0.65 0.2 213;
+    --chart-2: 0.72 0.22 185;
+    --chart-3: 0.75 0.24 150;
+    --chart-4: 0.65 0.18 120;
+    --chart-5: 0.72 0.16 95;
+
+    --sidebar: 0.16 0 0;
+    --sidebar-foreground: 0.94 0 0;
+    --sidebar-primary: 0.65 0.2 213;
+    --sidebar-primary-foreground: 0.12 0 0;
+    --sidebar-accent: 0.2 0 0;
+    --sidebar-accent-foreground: 0.88 0 0;
+    --sidebar-border: 0.24 0 0;
+    --sidebar-ring: 0.65 0.2 213;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .step-badge {
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-full font-semibold text-sm;
+  }
+  .step-active {
+    @apply bg-primary text-primary-foreground;
+  }
+  .step-inactive {
+    @apply bg-muted text-muted-foreground;
+  }
+  .step-complete {
+    @apply bg-accent text-accent-foreground;
+  }
+  .workflow-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-smooth;
+  }
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
